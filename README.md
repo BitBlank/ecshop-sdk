@@ -75,3 +75,10 @@ else
 进入「管理后台」-「系统设置」-「支付方式」-「B.app」-「安装」
 
 填入 `App Key` 与 `App Secret` 信息，并确定保存
+
+
+------
+
+
+如果安装插件遇到问题，请用B.app扫码以下二维码，联系官方客服  
+![请用B.app扫码](https://www.b.app/assets/img/pic/customer_service_qrcode.png)
