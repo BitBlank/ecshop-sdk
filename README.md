@@ -1,13 +1,13 @@
 # 加入插件文件
 
-复制 `source/ecshop/includes/modules/payment/bapp.php` 到ecshop的相应目录中的 `source/ecshop/includes/modules/payment/`  
-复制 `source/source/ecshop/languages/zh_cn/payment/bapp.php` 到ecshop的相应目录中的 `source/ecshop/languages/en_us/payment/`  
-复制 `source/source/ecshop/languages/zh_tw/payment/bapp.php` 到ecshop的相应目录中的 `source/ecshop/languages/en_us/payment/`  
-复制 `source/source/ecshop/languages/en_us/payment/bapp.php` 到ecshop的相应目录中的 `source/ecshop/languages/en_us/payment/`  
+复制 `source/ecshop/includes/modules/payment/bapp.php` 到ecshop的相应目录中的 `ecshop/includes/modules/payment/`  
+复制 `source/source/ecshop/languages/zh_cn/payment/bapp.php` 到ecshop的相应目录中的 `ecshop/languages/zh_cn/payment/`  
+复制 `source/source/ecshop/languages/zh_tw/payment/bapp.php` 到ecshop的相应目录中的 `ecshop/languages/zh_tw/payment/`  
+复制 `source/source/ecshop/languages/en_us/payment/bapp.php` 到ecshop的相应目录中的 `ecshop/languages/en_us/payment/`  
 
 # 处理回调
 
-修改 `source/ecshop/respond.php`
+修改 `ecshop/respond.php`
 
 请在 「if (empty($pay_code))」前添加代码（参考添加代码 Start-End）
 

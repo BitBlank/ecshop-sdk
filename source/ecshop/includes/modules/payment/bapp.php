@@ -61,7 +61,7 @@ class bapp
     function get_code($order, $payment)
     {
         $amount = (int)($order['order_amount'] * 100);
-        $reqParam = [
+        $reqParam = array(
             'order_id' => $order['log_id'],
             'amount' => $amount,
             'body' => $order['order_sn'],
@@ -72,7 +72,7 @@ class bapp
             'amount_type' => 'CNY',
             'time' => time() * 1000,
             'app_key' => $payment['bapp_appkey']
-        ];
+        );
         $sign = $this->get_sign($payment['bapp_appsecret'], $reqParam);
         $reqParam['sign'] = $sign;
         $res = $this->http_request('https://bapi.app/api/v2/pay', 'POST', $reqParam);
@@ -91,11 +91,11 @@ class bapp
         if ($_SERVER['REQUEST_METHOD'] != "POST") {
             $body = $_REQUEST['body'];
             $orderId = $_REQUEST['order_id'];
-            $reqParam = [
+            $reqParam = array(
                 'order_id' => $orderId,
                 'time' => time() * 1000,
                 'app_key' => $payment['bapp_appkey']
-            ];
+            );
             $sign = $this->get_sign($payment['bapp_appsecret'], $reqParam);
             $reqParam['sign'] = $sign;
             $res = $this->http_request('https://bapi.app/api/v2/order', 'GET', $reqParam);
@@ -146,7 +146,7 @@ class bapp
         return strtolower(md5($signOriginStr . "app_secret=$appSecret"));
     }
 
-    function http_request($url, $method = 'GET', $params = [])
+    function http_request($url, $method = 'GET', $params = array())
     {
         $curl = curl_init();
         if ($method == 'POST') {
@@ -163,7 +163,7 @@ class bapp
         curl_setopt($curl, CURLOPT_TIMEOUT, 60);
         $output = curl_exec($curl);
         if (curl_errno($curl) > 0) {
-            return [];
+            return array();
         }
         curl_close($curl);
         $json = json_decode($output, true);
