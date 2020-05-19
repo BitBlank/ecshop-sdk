@@ -78,7 +78,7 @@ class bapp
         $res = $this->http_request('https://bapi.app/api/v2/pay', 'POST', $reqParam);
         if ($res && $res['code'] == 200) {
             $payUrl = $res['data']['pay_url'];
-            return '<div style="text-align:center"><a href="' . $payUrl . '" style="background-color:#F6931A;color:#ffffff;margin:5px;padding:6px 12px;text-decoration:none;border-radius:4px;font-size:18px;font-weight:bold"><img width="14px" height="14px" style="margin-right:8px" src="https://cdn.fwtqo.cn/static/img/20190613_48.png">' . $GLOBALS['_LANG']['pay_button'] . '</a></div>';
+            return '<div style="text-align:center"><a href="' . $payUrl . '" style="background-color:#F6931A;color:#ffffff;margin:5px;padding:6px 12px;text-decoration:none;border-radius:4px;font-size:18px;font-weight:bold"><img width="14px" height="14px" style="margin-right:8px" src="https://cdn.rctsnwr.cn/static/img/20190613_48.png">' . $GLOBALS['_LANG']['pay_button'] . '</a></div>';
         } else if ($res) {
             return '<div style="text-align:center">' . $res['msg'] . '</div>';
         }
